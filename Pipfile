@@ -1,0 +1,14 @@
+[packages]
+# List packages needed at runtime, except plugin sdk.
+# These will be copied into the plugin ZIP distribution.
+
+[dev-packages]
+# Copy the packages from above here as well so that they are
+# available during development and testing.
+# These packages will NOT be copied into the ZIP distribution.
+
+# Basic packages needed for build and testing:
+oneidentity-safeguard-sessions-plugin-sdk = "~=1.8.0"
+
+[requires]
+python_version = "3.10"

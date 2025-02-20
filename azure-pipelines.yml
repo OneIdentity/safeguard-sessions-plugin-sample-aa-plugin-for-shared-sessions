@@ -1,0 +1,21 @@
+#
+#   Copyright (c) 2025 One Identity
+#
+
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- master
+
+pool:
+  name: Safeguard Privilaged Sessions Integration Pool
+
+steps:
+
+- script: |
+    pipenv install -d
+    pipenv run pluginv run-tests
+  displayName: 'Run tests'
